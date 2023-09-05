@@ -10,7 +10,8 @@ describe("Scenario Login Feature", function () {
     expect(response.body.status).to.eql('SUCCESS_LOGIN');
     expect(response.body.message).to.eql('Anda Berhasil Login');
     expect(response.body).to.include.keys("data", "message", "status", "credentials");
-  });
+
+  })
   it("2.Verify Failed Login with empty email & password", async function () {
     const response = await domain
       .post("/login")
@@ -45,8 +46,8 @@ describe("Scenario Login Feature", function () {
   })
   it("6.Login with invalid email & password valid", async function () {
     const response = await domain
-    .post("/login")
-    .send({ email:"admintesting12@gmail.com", password:"admintesting12@gmail.com"})
+      .post("/login")
+      .send({ email: "admintesting12@gmail.com", password: "admintesting12@gmail.com" })
     expect(response.body.status).to.equal('FAILED_LOGIN');
     expect(response.body.message).to.equal('Email atau Password Anda Salah');
     expect(response.body).to.include.keys("data", "message", "status");
