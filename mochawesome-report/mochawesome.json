@@ -2,14 +2,14 @@
   "stats": {
     "suites": 2,
     "tests": 11,
-    "passes": 5,
+    "passes": 4,
     "pending": 0,
-    "failures": 6,
-    "start": "2023-09-05T10:20:08.631Z",
-    "end": "2023-09-05T10:20:15.805Z",
-    "duration": 7174,
+    "failures": 7,
+    "start": "2023-09-11T04:23:33.607Z",
+    "end": "2023-09-11T04:23:43.001Z",
+    "duration": 9394,
     "testsRegistered": 11,
-    "passPercent": 45.45454545454545,
+    "passPercent": 36.36363636363637,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d5f2dfa3-4db4-403c-a0d6-62fd0c7c3068",
+      "uuid": "b873a4d1-6cfd-4e56-b7fc-9d0f262e32d1",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a5e8339d-f5a1-41b3-b8d3-2dcd76696294",
+          "uuid": "f2010b6a-9fce-44a8-b559-c46dfd7949e5",
           "title": "Scenario Login Feature",
           "fullFile": "C:\\Users\\fadli\\Documents\\JagoQA\\JagoQA\\Login\\login.js",
           "file": "\\JagoQA\\Login\\login.js",
@@ -38,7 +38,7 @@
               "title": "1.Verify Success Login with valid email and password",
               "fullTitle": "Scenario Login Feature 1.Verify Success Login with valid email and password",
               "timedOut": false,
-              "duration": 810,
+              "duration": 1306,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "const response = await domain\n  .post(\"/login\")\n  .send({ email: \"jokotampan900@gmail.com\", password: \"jokotampan900\" });\nexpect(response.body.status).to.eql('SUCCESS_LOGIN');\nexpect(response.body.message).to.eql('Anda Berhasil Login');\nexpect(response.body).to.include.keys(\"data\", \"message\", \"status\", \"credentials\");",
               "err": {},
-              "uuid": "9f4575d6-097e-4870-badd-778fb6e1cf4f",
-              "parentUUID": "a5e8339d-f5a1-41b3-b8d3-2dcd76696294",
+              "uuid": "6791d267-66c5-47cc-acad-ddc2d25eda5a",
+              "parentUUID": "f2010b6a-9fce-44a8-b559-c46dfd7949e5",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "2.Verify Failed Login with empty email & password",
               "fullTitle": "Scenario Login Feature 2.Verify Failed Login with empty email & password",
               "timedOut": false,
-              "duration": 613,
+              "duration": 600,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -69,8 +69,8 @@
                 "estack": "AssertionError: expected 'Email & Password tidak boleh kosong' to equal 'Cek kembali email anda'\n    at Context.<anonymous> (JagoQA\\Login\\login.js:20:38)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": "- Email & Password tidak boleh kosong\n+ Cek kembali email anda\n"
               },
-              "uuid": "2415647b-2653-49c5-8b4a-1645edf55bf4",
-              "parentUUID": "a5e8339d-f5a1-41b3-b8d3-2dcd76696294",
+              "uuid": "3247707e-00b9-4eb1-a3d2-d567199d54bf",
+              "parentUUID": "f2010b6a-9fce-44a8-b559-c46dfd7949e5",
               "isHook": false,
               "skipped": false
             },
@@ -78,7 +78,7 @@
               "title": "3.Verify Failed Login with email registered & empty password",
               "fullTitle": "Scenario Login Feature 3.Verify Failed Login with email registered & empty password",
               "timedOut": false,
-              "duration": 632,
+              "duration": 598,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -91,8 +91,8 @@
                 "estack": "AssertionError: expected 'Password tidak boleh kosong' to equal 'Email atau Password Anda Salah'\n    at Context.<anonymous> (JagoQA\\Login\\login.js:28:38)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": "- Password tidak boleh kosong\n+ Email atau Password Anda Salah\n"
               },
-              "uuid": "64990e28-6a76-4308-ab19-0e60a4fc1405",
-              "parentUUID": "a5e8339d-f5a1-41b3-b8d3-2dcd76696294",
+              "uuid": "36ec8e64-c423-4049-9560-0bcaf8b91d01",
+              "parentUUID": "f2010b6a-9fce-44a8-b559-c46dfd7949e5",
               "isHook": false,
               "skipped": false
             },
@@ -100,7 +100,7 @@
               "title": "4.Verify Failed Login with email & password are not registered or invalid",
               "fullTitle": "Scenario Login Feature 4.Verify Failed Login with email & password are not registered or invalid",
               "timedOut": false,
-              "duration": 601,
+              "duration": 604,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -113,8 +113,8 @@
                 "estack": "AssertionError: expected 'Password tidak boleh kosong' to equal 'Email atau Password Anda Salah'\n    at Context.<anonymous> (JagoQA\\Login\\login.js:36:38)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": "- Password tidak boleh kosong\n+ Email atau Password Anda Salah\n"
               },
-              "uuid": "8e61fc58-5d4d-424e-a6f5-d9c88e6274a1",
-              "parentUUID": "a5e8339d-f5a1-41b3-b8d3-2dcd76696294",
+              "uuid": "36892694-4602-4d20-b8f4-075c8637e970",
+              "parentUUID": "f2010b6a-9fce-44a8-b559-c46dfd7949e5",
               "isHook": false,
               "skipped": false
             },
@@ -122,7 +122,7 @@
               "title": "5.Verify Login with valid email & password are not registered or invalid",
               "fullTitle": "Scenario Login Feature 5.Verify Login with valid email & password are not registered or invalid",
               "timedOut": false,
-              "duration": 639,
+              "duration": 621,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -131,8 +131,8 @@
               "context": null,
               "code": "const response = await domain\n  .post(\"/login\")\n  .send({ email: \"admintesting@gmail.com\", password: \"password\" })\nexpect(response.body.status).to.equal('FAILED_LOGIN');\nexpect(response.body.message).to.equal('Email atau Password Anda Salah');\nexpect(response.body).to.include.keys(\"data\", \"message\", \"status\");",
               "err": {},
-              "uuid": "fe6d3f78-b65f-41da-ad6b-5669b01bf0bf",
-              "parentUUID": "a5e8339d-f5a1-41b3-b8d3-2dcd76696294",
+              "uuid": "31bba6d5-1249-4eb4-96e2-3d697e9d3b92",
+              "parentUUID": "f2010b6a-9fce-44a8-b559-c46dfd7949e5",
               "isHook": false,
               "skipped": false
             },
@@ -140,7 +140,7 @@
               "title": "6.Login with invalid email & password valid",
               "fullTitle": "Scenario Login Feature 6.Login with invalid email & password valid",
               "timedOut": false,
-              "duration": 713,
+              "duration": 608,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -153,32 +153,32 @@
                 "estack": "AssertionError: expected 'Email/Password melebihin maksimal kar…' to equal 'Email atau Password Anda Salah'\n    at Context.<anonymous> (JagoQA\\Login\\login.js:52:38)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": "- Email/Password melebihin maksimal karakter\n+ Email atau Password Anda Salah\n"
               },
-              "uuid": "fef51702-f50a-4300-a4ce-e07c36f9eebf",
-              "parentUUID": "a5e8339d-f5a1-41b3-b8d3-2dcd76696294",
+              "uuid": "7961b826-c98b-4167-b8a7-68d491de777a",
+              "parentUUID": "f2010b6a-9fce-44a8-b559-c46dfd7949e5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9f4575d6-097e-4870-badd-778fb6e1cf4f",
-            "fe6d3f78-b65f-41da-ad6b-5669b01bf0bf"
+            "6791d267-66c5-47cc-acad-ddc2d25eda5a",
+            "31bba6d5-1249-4eb4-96e2-3d697e9d3b92"
           ],
           "failures": [
-            "2415647b-2653-49c5-8b4a-1645edf55bf4",
-            "64990e28-6a76-4308-ab19-0e60a4fc1405",
-            "8e61fc58-5d4d-424e-a6f5-d9c88e6274a1",
-            "fef51702-f50a-4300-a4ce-e07c36f9eebf"
+            "3247707e-00b9-4eb1-a3d2-d567199d54bf",
+            "36ec8e64-c423-4049-9560-0bcaf8b91d01",
+            "36892694-4602-4d20-b8f4-075c8637e970",
+            "7961b826-c98b-4167-b8a7-68d491de777a"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 4008,
+          "duration": 4337,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "e3e17c2a-f72a-4978-b7f1-e4c8815d068d",
+          "uuid": "dcebe09b-e2a6-432c-aee7-6b004e0aa39b",
           "title": "Scenario Register Feature",
           "fullFile": "C:\\Users\\fadli\\Documents\\JagoQA\\JagoQA\\Register\\Register.js",
           "file": "\\JagoQA\\Register\\Register.js",
@@ -189,7 +189,7 @@
               "title": "1.Verify Success Register",
               "fullTitle": "Scenario Register Feature 1.Verify Success Register",
               "timedOut": false,
-              "duration": 612,
+              "duration": 618,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -202,8 +202,8 @@
                 "estack": "AssertionError: expected 'FAILED_REGISTER' to deeply equal 'SUCCESS_REGISTER'\n    at Context.<anonymous> (JagoQA\\Register\\Register.js:9:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": "- FAILED_REGISTER\n+ SUCCESS_REGISTER\n"
               },
-              "uuid": "a2650628-0aff-4b5f-8bab-bb60acb3e0e1",
-              "parentUUID": "e3e17c2a-f72a-4978-b7f1-e4c8815d068d",
+              "uuid": "a0851baf-03e4-49fa-b7f9-555365b0576a",
+              "parentUUID": "dcebe09b-e2a6-432c-aee7-6b004e0aa39b",
               "isHook": false,
               "skipped": false
             },
@@ -211,7 +211,7 @@
               "title": "2.Verify Failed Register with empty name",
               "fullTitle": "Scenario Register Feature 2.Verify Failed Register with empty name",
               "timedOut": false,
-              "duration": 589,
+              "duration": 701,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -220,26 +220,30 @@
               "context": null,
               "code": "const response = await domain\n  .post(\"/register\")\n  .send({ \"email\": \"fadlitesting@gmail.com\", \"password\": \"qwerty\", \"name\": \"\" })\nexpect(response.body.status).to.eql('FAILED_REGISTER');\nexpect(response.body.message).to.eql('Gagal Registrasi');\nexpect(response.body).to.include.keys(\"data\", \"message\", \"status\");",
               "err": {},
-              "uuid": "76147a7d-d20a-43fa-a5d7-58811aa8b46a",
-              "parentUUID": "e3e17c2a-f72a-4978-b7f1-e4c8815d068d",
+              "uuid": "f81d7be8-1a45-44b5-9777-15ab272b8759",
+              "parentUUID": "dcebe09b-e2a6-432c-aee7-6b004e0aa39b",
               "isHook": false,
               "skipped": false
             },
             {
               "title": "3.Verify Failed Register with all request body is empty",
               "fullTitle": "Scenario Register Feature 3.Verify Failed Register with all request body is empty",
-              "timedOut": false,
-              "duration": 624,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "timedOut": true,
+              "duration": 2006,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "const response = await domain\n  .post(\"/register\")\n  .send({ \"email\": \"\", \"password\": \"\", \"name\": \"\" })\nexpect(response.body.status).to.eql('FAILED_REGISTER');\nexpect(response.body.message).to.eql('Gagal Registrasi');\nexpect(response.body).to.include.keys(\"data\", \"message\", \"status\");",
-              "err": {},
-              "uuid": "eecfab51-5263-4b83-9002-63792e8055fd",
-              "parentUUID": "e3e17c2a-f72a-4978-b7f1-e4c8815d068d",
+              "err": {
+                "message": "Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (C:\\Users\\fadli\\Documents\\JagoQA\\JagoQA\\Register\\Register.js)",
+                "estack": "Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (C:\\Users\\fadli\\Documents\\JagoQA\\JagoQA\\Register\\Register.js)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)",
+                "diff": null
+              },
+              "uuid": "8d4d7e20-55ef-421a-b88a-07e7cfe4aa84",
+              "parentUUID": "dcebe09b-e2a6-432c-aee7-6b004e0aa39b",
               "isHook": false,
               "skipped": false
             },
@@ -247,7 +251,7 @@
               "title": "4.Verify Failed Register if email using invalid format",
               "fullTitle": "Scenario Register Feature 4.Verify Failed Register if email using invalid format",
               "timedOut": false,
-              "duration": 682,
+              "duration": 1015,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -256,8 +260,8 @@
               "context": null,
               "code": "const response = await domain\n  .post(\"/register\")\n  .send({ \"email\": \"user@example.c\", \"password\": \"qwerty\", \"name\": \"FadliJagoQA1\" })\nexpect(response.body.status).to.eql('FAILED_REGISTER');\nexpect(response.body.message).to.eql('Cek kembali email anda');\nexpect(response.body).to.include.keys(\"data\", \"message\", \"status\");",
               "err": {},
-              "uuid": "59f41242-7e13-4e9e-8d4e-2fb2d926ee2a",
-              "parentUUID": "e3e17c2a-f72a-4978-b7f1-e4c8815d068d",
+              "uuid": "b66e5c49-8829-4674-970e-417709a6c51c",
+              "parentUUID": "dcebe09b-e2a6-432c-aee7-6b004e0aa39b",
               "isHook": false,
               "skipped": false
             },
@@ -265,7 +269,7 @@
               "title": "5.Verify Failed Register if name contains number",
               "fullTitle": "Scenario Register Feature 5.Verify Failed Register if name contains number",
               "timedOut": false,
-              "duration": 609,
+              "duration": 660,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -278,25 +282,25 @@
                 "estack": "AssertionError: expected 'Gagal Registrasi' to deeply equal 'Tidak boleh mengandung symbol'\n    at Context.<anonymous> (JagoQA\\Register\\Register.js:42:38)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": "- Gagal Registrasi\n+ Tidak boleh mengandung symbol\n"
               },
-              "uuid": "cd9c1506-74ec-4f3b-b927-176f2e48a72e",
-              "parentUUID": "e3e17c2a-f72a-4978-b7f1-e4c8815d068d",
+              "uuid": "7a051ae2-5b87-4896-bd16-543146f057fb",
+              "parentUUID": "dcebe09b-e2a6-432c-aee7-6b004e0aa39b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "76147a7d-d20a-43fa-a5d7-58811aa8b46a",
-            "eecfab51-5263-4b83-9002-63792e8055fd",
-            "59f41242-7e13-4e9e-8d4e-2fb2d926ee2a"
+            "f81d7be8-1a45-44b5-9777-15ab272b8759",
+            "b66e5c49-8829-4674-970e-417709a6c51c"
           ],
           "failures": [
-            "a2650628-0aff-4b5f-8bab-bb60acb3e0e1",
-            "cd9c1506-74ec-4f3b-b927-176f2e48a72e"
+            "a0851baf-03e4-49fa-b7f9-555365b0576a",
+            "8d4d7e20-55ef-421a-b88a-07e7cfe4aa84",
+            "7a051ae2-5b87-4896-bd16-543146f057fb"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 3116,
+          "duration": 5000,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
